@@ -217,3 +217,25 @@ function checkForSelection() {
         return false;
     }
 }
+
+function checkForSelection(selectId) {
+    var target = document.getElementById(selectId);
+    if (target.selectedIndex === 0){
+        alert("Please select a state.");
+        return false;
+    }
+}
+// {/* <form onsubmit= "return checkForSelection('states');" */}≤≤≤≤
+
+
+// radio buttons
+function validateRadio() {
+    var radio = document.getElementsByName("r1");
+    for (var i = 0; i < radio.length; i++) {
+        if (radio[i].checked) {
+            return true;
+        }
+    }
+    alert("Please check one.");
+    return false;
+}
