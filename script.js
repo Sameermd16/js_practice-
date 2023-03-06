@@ -239,3 +239,22 @@ function validateRadio() {
     alert("Please check one.");
     return false;
 }
+
+function validateZIP() {
+    var zip = document.getElementById("zip").value;
+    if ( zip.length === 0){
+        alert("ZIP cannot be empty");
+        return false;
+    }
+    else if (zip.length < 5){
+        alert("ZIP Code cannot be less than 5 numbers");
+        return false;
+    }
+    for (var i = 0; i <= 4; i++) {
+        var thisChar = parseInt(zip[i]);
+        if (isNaN(thisChar)) {
+            alert("Please enter only numbers.");
+            return false;
+        }
+    };
+};
